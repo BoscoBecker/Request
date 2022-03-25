@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2022/03/25 13:38:31.396,=C:\Users\DevDelphi\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2022/03/25 13:38:31.593,=C:\Users\DevDelphi\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>2022/03/25 13:39:20.621,C:\Joao\Projetos\C++\Request\src\Main.cpp=C:\Users\DevDelphi\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>2022/03/25 13:39:20.621,C:\Joao\Projetos\C++\Request\src\Main.h=C:\Users\DevDelphi\Documents\Embarcadero\Studio\Projects\Unit2.h</Transaction>
+    <Transaction>2022/03/25 13:39:20.621,C:\Joao\Projetos\C++\Request\src\Main.dfm=C:\Users\DevDelphi\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2022/03/25 13:39:47.745,C:\Joao\Projetos\C++\Request\src\Request.h=C:\Users\DevDelphi\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2022/03/25 13:40:07.906,C:\Joao\Projetos\C++\Request\src\Requ.cbproj=C:\Users\DevDelphi\Documents\Embarcadero\Studio\Projects\Project2.cbproj</Transaction>
+    <Transaction>2022/03/25 13:40:12.983,C:\Joao\Projetos\C++\Request\src\Req.cbproj=C:\Joao\Projetos\C++\Request\src\Requ.cbproj</Transaction>
+  </Transactions>
+</BorlandProject>
