@@ -39,13 +39,21 @@ void __fastcall TForm2::Request(String URI){
 }
 void __fastcall TForm2::Button1Click(TObject *Sender)
 {
+ try 
+   {
+
+	Button1->Enabled =  False;
 	ActivityIndicator1->Animate = True;
 
 	String path = location->Text.Trim();
 	ActivityIndicator1->Repaint();
-	Request(path);
-
-	ActivityIndicator1->Animate = False;
-
+	Request(path);               
+	   
+   } catch (const Exception& e) {		
+		Button1->Enabled =  True;
+		ActivityIndicator1->Animate = False;  	
+   }
+	Button1->Enabled =  True;
+	ActivityIndicator1->Animate = False;  	
 }
 //---------------------------------------------------------------------------

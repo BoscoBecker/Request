@@ -27,23 +27,26 @@ void __fastcall TForm2::Request(String URI){
 	}
 
 	RESTRequest1->Response = RESTResponse1;
-	RESTRequest1->Response->ContentType = "application/json";
+	RESTRequest1->Response->ContentType = "text/html";
 	RESTRequest1->Response->ContentEncoding="UTF-8";
 	RESTRequest1->Execute();
 
 	Log->Text = RESTRequest1->Response->Content;
 
-	StatusBar->Panels[0][1]->Text = "Content Length " + RESTRequest1->Response->ContentLength;
-	StatusBar->Panels[0][1]->Text = "Status Code "+ RESTRequest1->Response->StatusCode;
-	StatusBar->Panels[0][2]->Text = "Server " + RESTRequest1->Response->Server;
+	StatusBar->Panels[0][0]->Text = "Content Length" + String(RESTRequest1->Response->ContentLength);
+	StatusBar->Panels[0][1]->Text = "Status Code "+ String(RESTRequest1->Response->StatusCode);
+	StatusBar->Panels[0][2]->Text = "Server " + String(RESTRequest1->Response->Server);
 }
 void __fastcall TForm2::Button1Click(TObject *Sender)
 {
+	Button1->Enabled =  False;
 	ActivityIndicator1->Animate = True;
 
 	String path = location->Text.Trim();
 	ActivityIndicator1->Repaint();
 	Request(path);
+
+	Button1->Enabled =  True;
 
 	ActivityIndicator1->Animate = False;
 

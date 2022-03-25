@@ -17,6 +17,7 @@ object Form2: TForm2
     Width = 837
     Height = 381
     Align = alClient
+    ReadOnly = True
     ScrollBars = ssVertical
     TabOrder = 0
   end

@@ -1,9 +1,9 @@
 object Form2: TForm2
   Left = 0
   Top = 0
-  Caption = 'Form2'
+  Caption = 'Requisitor de URL'
   ClientHeight = 441
-  ClientWidth = 651
+  ClientWidth = 837
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,29 +14,26 @@ object Form2: TForm2
   object Log: TMemo
     Left = 0
     Top = 41
-    Width = 651
-    Height = 400
+    Width = 837
+    Height = 381
     Align = alClient
+    ScrollBars = ssVertical
     TabOrder = 0
-    ExplicitLeft = 8
-    ExplicitTop = 160
-    ExplicitWidth = 635
-    ExplicitHeight = 273
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 651
+    Width = 837
     Height = 41
     Align = alTop
     Caption = 'Panel1'
     TabOrder = 1
     DesignSize = (
-      651
+      837
       41)
     object Button1: TButton
-      Left = 559
-      Top = 6
+      Left = 715
+      Top = 7
       Width = 75
       Height = 25
       Anchors = [akRight]
@@ -44,7 +41,7 @@ object Form2: TForm2
       TabOrder = 0
       OnClick = Button1Click
     end
-    object ComboBox1: TComboBox
+    object cbTipo: TComboBox
       Left = 8
       Top = 8
       Width = 90
@@ -58,12 +55,35 @@ object Form2: TForm2
     end
     object location: TEdit
       Left = 104
-      Top = 7
-      Width = 449
-      Height = 24
+      Top = 8
+      Width = 603
+      Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 2
     end
+    object ActivityIndicator1: TActivityIndicator
+      Left = 796
+      Top = 3
+      Anchors = [akTop, akRight]
+    end
+  end
+  object StatusBar: TStatusBar
+    Left = 0
+    Top = 422
+    Width = 837
+    Height = 19
+    Panels = <
+      item
+        Width = 300
+      end
+      item
+        Width = 300
+      end
+      item
+        Width = 300
+      end>
+    ExplicitLeft = 8
+    ExplicitTop = 428
   end
   object RESTRequest1: TRESTRequest
     Client = RESTClient1
