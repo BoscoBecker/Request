@@ -32,9 +32,9 @@ void __fastcall TForm2::Request(String URI){
 
 	Log->Text = RESTRequest1->Response->Content;
 
-	StatusBar->Panels[0][0]->Text = "Content Length: " + String(RESTRequest1->Response->ContentLength);
-	StatusBar->Panels[0][1]->Text = "Status Code: "+ String(RESTRequest1->Response->StatusCode);
-	StatusBar->Panels[0][2]->Text = "Server: " + String(RESTRequest1->Response->Server);
+	StatusBar->Panels[0][0]->Text = "Content Length" + String(RESTRequest1->Response->ContentLength);
+	StatusBar->Panels[0][1]->Text = "Status Code "+ String(RESTRequest1->Response->StatusCode);
+	StatusBar->Panels[0][2]->Text = "Server " + String(RESTRequest1->Response->Server);
 }
 void __fastcall TForm2::Button1Click(TObject *Sender)
 {
