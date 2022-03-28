@@ -20,6 +20,8 @@ object Form2: TForm2
     ReadOnly = True
     ScrollBars = ssVertical
     TabOrder = 0
+    ExplicitLeft = -56
+    ExplicitTop = 60
   end
   object Panel1: TPanel
     Left = 0
@@ -83,8 +85,6 @@ object Form2: TForm2
       item
         Width = 300
       end>
-    ExplicitLeft = 8
-    ExplicitTop = 428
   end
   object RESTRequest1: TRESTRequest
     Client = RESTClient1
@@ -95,11 +95,11 @@ object Form2: TForm2
   end
   object RESTClient1: TRESTClient
     Params = <>
-    Left = 400
-    Top = 184
+    Left = 104
+    Top = 200
   end
   object RESTResponse1: TRESTResponse
-    Left = 368
-    Top = 104
+    Left = 104
+    Top = 136
   end
 end

@@ -12,10 +12,9 @@
 #pragma resource "*.dfm"
 TForm2 *Form2;
 //---------------------------------------------------------------------------
-__fastcall TForm2::TForm2(TComponent* Owner)
-	: TForm(Owner)
-{
-}
+
+__fastcall TForm2::TForm2(TComponent* Owner): TForm(Owner){}
+
 //---------------------------------------------------------------------------
 void __fastcall TForm2::Request(String URI){
 
@@ -39,21 +38,22 @@ void __fastcall TForm2::Request(String URI){
 }
 void __fastcall TForm2::Button1Click(TObject *Sender)
 {
- try 
-   {
+	try
+	{
+		Button1->Enabled =  False;
+		ActivityIndicator1->Animate = True;
 
-	Button1->Enabled =  False;
-	ActivityIndicator1->Animate = True;
+		String path = location->Text.Trim();
+		ActivityIndicator1->Repaint();
+		Request(path);
 
-	String path = location->Text.Trim();
-	ActivityIndicator1->Repaint();
-	Request(path);               
-	   
-   } catch (const Exception& e) {		
+	} catch (const Exception& e) {
 		Button1->Enabled =  True;
-		ActivityIndicator1->Animate = False;  	
-   }
+		ActivityIndicator1->Animate = False;
+		Application->MessageBox(e.Message.c_str(),L"Não foi posssível realizar a requisição, Motivo:",MB_OK);
+	}
+
 	Button1->Enabled =  True;
-	ActivityIndicator1->Animate = False;  	
+	ActivityIndicator1->Animate = False;
 }
 //---------------------------------------------------------------------------
